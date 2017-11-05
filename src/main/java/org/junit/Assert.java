@@ -855,6 +855,8 @@ public class Assert {
         String className = value == null ? "null" : value.getClass().getName();
         return className + "<" + valueString + ">";
     }
+    
+    public static void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator)
 
     /**
      * Asserts that two object arrays are equal. If they are not, an
