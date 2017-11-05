@@ -95,6 +95,14 @@ public class Assert {
     public static void fail() {
         fail(null);
     }
+    
+    public static void assertGreaterThan(int uno, int due) {
+                assertTrue(null, uno > due);
+            }
+            
+            public static void assertGreaterThan(char uno, char due) {
+                assertTrue(null, uno > due);
+           }
 
     /**
      * Asserts that two objects are equal. If they are not, an
