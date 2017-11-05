@@ -856,7 +856,11 @@ public class Assert {
         return className + "<" + valueString + ">";
     }
     
-    public static void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator)
+    public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
+                if (comparator.compare(o1, o2) <= 0) {
+                  fail("O1 non è maggiore di O2"); 
+               }
+           }
 
     /**
      * Asserts that two object arrays are equal. If they are not, an
